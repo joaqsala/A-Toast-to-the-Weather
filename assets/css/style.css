@@ -1,3 +1,29 @@
-body {
-    background-color: gray;
-}
+/* Today's Mixes-Cocktail Recipe Results */
+.promotion-hero {
+    background-image: url("https://placehold.it/150x500");
+    background-size: cover;
+    height: 400px;
+    padding: 3rem;
+  }
+  
+  .promotion-hero-header h1 {
+    background-color: #fefefe;
+    width: auto;
+    padding: 1rem;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .promotion-hero-links {
+    padding: 1rem;
+    background-color: #fefefe;
+    border: 2px solid #0a0a0a;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  
