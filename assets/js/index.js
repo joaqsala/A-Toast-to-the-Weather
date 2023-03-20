@@ -14,41 +14,77 @@ function getWeather() {
       })
       .then(function (data) {
         console.log(data)
+        //insert conditions so that data.main.temp leads to a range of temps,
+        //that can then be used to query for a cocktail
+
       });
     }
 
 
+    function ingredientGin(){
+        var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin"
+    
+        fetch(queryURL)
+            .then(function (response) {
+                if (response.status !== 200){
+                    console.log("There is an issue")
+                    return;
+                }
+            return response.json();
+              })
+            .then(function (data) {
+            console.log(data);
+          
+             } )
+    };
+
+    ingredientGin()
+
+    function ingredientVodka(){
+        var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=whiskey"
+    
+        fetch(queryURL)
+            .then(function (response) {
+                if (response.status !== 200){
+                    console.log("There is an issue")
+                    return;
+                }
+            return response.json();
+              })
+            .then(function (data) {
+            console.log(data);
+          
+             } )
+    };
+
+    ingredientVodka()
 
 
+// function randomCocktail(){
+//     var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
 
+//     fetch(queryURL)
+//         .then(function (response) {
+//             if (response.status !== 200){
+//                 console.log("There is an issue")
+//                 return;
+//             }
+//         return response.json();
+//           })
+//         .then(function (data) {
+//         console.log(data);
+//         displayRandom(data);
+//          } )
+// };
 
-function randomCocktail(){
-    var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+// function displayRandom(cocktail) {
+//     console.log(cocktail);
+//     console.log(cocktail.drinks[0].strDrink)
+//     console.log(cocktail.drinks[0].strDrinkThumb)
+//     console.log(cocktail.drinks[0].strInstructions)
 
-    fetch(queryURL)
-        .then(function (response) {
-            if (response.status !== 200){
-                console.log("There is an issue")
-                return;
-            }
-        return response.json();
-          })
-        .then(function (data) {
-        console.log(data);
-        displayRandom(data);
-         } )
-};
+//     }
 
-function displayRandom(cocktail) {
-    console.log(cocktail);
-    console.log(cocktail.drinks[0].strDrink)
-    console.log(cocktail.drinks[0].strDrinkThumb)
-    console.log(cocktail.drinks[0].strInstructions)
-
-
-
-    }
-
-randomCocktail()
+// randomCocktail()
 
 
