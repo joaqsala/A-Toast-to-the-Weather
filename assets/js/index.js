@@ -98,7 +98,7 @@ function nameCocktail(){
                 return;
             }
         return response.json();
-          })
+        })
         .then(function (data) {
         console.log(data);
 
@@ -135,8 +135,6 @@ function nameCocktail(){
     var cocktailDirections = $("#instructions")
     cocktailDirections.html(data.drinks[0].strInstructions)
     }
- 
-
 
         })
     }
