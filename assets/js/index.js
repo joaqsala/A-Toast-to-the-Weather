@@ -107,35 +107,36 @@ function nameCocktail(){
     console.log(data.drinks[0].strInstructions)
 
     // in some div w/id of #drink-area
-    var drinkName = $("#drink-area");
-    drinkName.html("<h2>" + data.drinks[0].strDrink + "</h2>");
+    var cocktailName = $("#drink-area");
+    cocktailName.html("<h2>" + data.drinks[0].strDrink + "</h2>");
     // var cocktailName = $("<h3>");
     // cocktailName.html(data.drinks[0].strDrink);
     // console.log(cocktailName)
     // drinkDiv.append(cocktailName);
 
-    var drinkImg = $("#drink-img");
-    drinkImg.attr("src", data.drinks[0].strDrinkThumb)
-    drinkImg.attr("alt", data.drinks[0].strDrink + "drink image")
+    var cocktailImg = $("#drink-img");
+    cocktailImg.attr("src", data.drinks[0].strDrinkThumb)
+    cocktailImg.attr("alt", data.drinks[0].strDrink + "drink image")
 
 
-    var drinkIngredients = $("#instructionsingredients");
+    var cocktailIngredients = $("#ingredients");
 
     for (var i = 1; i < 16; i++){
-    // if (data.drinks[0][`strIngredients${i}` == null]){
-    //     break;
-    // }
+    if (data.drinks[0][`strIngredient${i}`] == null){
+        break;
+    }
     var ingredients = document.createElement("li");
-    ingredients.innerHTML = data.drinks[0][`strMeasure${i}`]
+    ingredients.innerHTML = data.drinks[0][`strMeasure${i}`] + " : " + data.drinks[0][`strIngredient${i}`]
     console.log(ingredients)
-    // + " : " + data.drinks[0][`strIngredients${i}`] )
-    // drinkIngredients.html(ingredients{i})
 
+    cocktailIngredients.append(ingredients)
+    
+
+    var cocktailDirections = $("#instructions")
+    cocktailDirections.html(data.drinks[0].strInstructions)
     }
  
-    //     var cocktailDirections = $('p').html(data.drinks[0].strInstructions)
-    //     drinkDiv.append(cocktailDirections)
-    // }
+
 
         })
     }
