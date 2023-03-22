@@ -1,4 +1,8 @@
+var apiKey = "f4d2316cd893af3bab99aa493b1486ad"
+var citySearch = $("#city-search");
 
+
+    
 
 
 
@@ -33,62 +37,62 @@ function getWeather() {
       });
     }
 
-
-    function ingredientGin(){
-        var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin"
+    citySearch.on("click", getWeather)
+    // function ingredientGin(){
+    //     var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin"
     
-        fetch(queryURL)
-            .then(function (response) {
-                if (response.status !== 200){
-                    console.log("There is an issue")
-                    return;
-                }
-            return response.json();
-              })
-            .then(function (data) {
-            console.log(data);
+    //     fetch(queryURL)
+    //         .then(function (response) {
+    //             if (response.status !== 200){
+    //                 console.log("There is an issue")
+    //                 return;
+    //             }
+    //         return response.json();
+    //           })
+    //         .then(function (data) {
+    //         console.log(data);
           
-             } )
-    };
+    //          } )
+    // };
 
-    ingredientGin();
+//     ingredientGin();
 
-    function ingredientVodka(){
-        var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka"
+//     function ingredientVodka(){
+//         var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka"
     
-        fetch(queryURL)
-            .then(function (response) {
-                if (response.status !== 200){
-                    console.log("There is an issue")
-                    return;
-                }
-            return response.json();
-              })
-            .then(function (data) {
-            console.log(data);
+//         fetch(queryURL)
+//             .then(function (response) {
+//                 if (response.status !== 200){
+//                     console.log("There is an issue")
+//                     return;
+//                 }
+//             return response.json();
+//               })
+//             .then(function (data) {
+//             console.log(data);
           
-             } )
-    };
+//              } )
+//     };
 
-    ingredientVodka();
+//     ingredientVodka();
 
 
-function randomCocktail(){
-    var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+// function randomCocktail(){
+//     var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
 
-    fetch(queryURL)
-        .then(function (response) {
-            if (response.status !== 200){
-                console.log("There is an issue")
-                return;
-            }
-        return response.json();
-          })
-        .then(function (data) {
-        console.log(data);
-        displayRandom(data);
-         } )
-};
+//     fetch(queryURL)
+//         .then(function (response) {
+//             if (response.status !== 200){
+//                 console.log("There is an issue")
+//                 return;
+//             }
+//         return response.json();
+//           })
+//         .then(function (data) {
+//         console.log(data);
+//         displayRandom(data);
+//          } )
+// };
 
 // function displayRandom(cocktail) {
 //     console.log(cocktail);
@@ -118,6 +122,6 @@ function randomCocktail(){
         //drinkDiv.append(cocktailDirections)
     // }
 
-randomCocktail()
+// randomCocktail()
 
 
