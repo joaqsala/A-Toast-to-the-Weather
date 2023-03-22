@@ -1,5 +1,6 @@
 var apiKey = "f4d2316cd893af3bab99aa493b1486ad"
 var citySearch = $("#city-search");
+var weatherEl = $("#weatherEl");
 
 
     
@@ -18,6 +19,9 @@ function getWeather() {
       })
       .then(function (data) {
         console.log(data)
+        console.log(data.main.temp)
+        var cityTemp=data.main.temp
+        weatherEl.innerHTML = "<h2>" + cityTemp + "</h2>"
         //insert conditions so that data.main.temp leads to a range of temps,
         //that can then be used to query for a cocktail
 
