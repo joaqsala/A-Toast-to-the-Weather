@@ -18,6 +18,8 @@ function getWeather() {
       })
       .then(function (data) {
         console.log(data)
+
+
         //insert conditions so that data.main.temp leads to a range of temps,
         //that can then be used to query for a cocktail
 
