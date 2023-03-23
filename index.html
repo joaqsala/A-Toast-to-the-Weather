@@ -17,6 +17,17 @@
 
 
   <body>
+    <div class="hero-section">
+      <div class="hero-section-text">
+        <h1>A Toast To The Weather</h1>
+        <h5>Use the Search Bar to find your city's current weather, and find out the perfect drink for today!</h5>
+      </div>
+    </div>
+    
+    
+    
+
+
     <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
         <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
         <div class="title-bar-title">Menu</div>
@@ -25,7 +36,7 @@
       <div class="top-bar" id="responsive-menu">
         <div class="top-bar-right">
           <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">Toast to today/Meteorology Mixology Any other Names, we can vote</li>
+            <li id="weather-output" class="menu-text">Your Current Weather</li>
             <li class="has-submenu">
               <a href="#0">Something here maybe if we need it?</a>
               <ul class="submenu menu vertical" data-submenu>
@@ -34,13 +45,13 @@
                 <li><a href="#0">Three</a></li>
               </ul>
             </li>
-            <li><a href="#0">Something here if we need it?</a></li>
-            <li><a href="#0">My Saved Recipes</a></li>
+            <li><a href="#0"></a></li>
+            <li><a href="#0"></a></li>
           </ul>
         </div>
         <div class="top-bar-left">
           <ul class="menu">
-            <li><input id="city-input" type="search" placeholder="Enter your Zip to find your Weather
+            <li><input id="city-input" type="search" placeholder="Enter your City to find your Weather
                 "></li>
             <li><button id="city-search" type="button" class="button">Search</button></li>
           </ul>
@@ -55,12 +66,12 @@
         <div class="marketing-site-content-section-block">
           <h3 class="marketing-site-content-section-block-header">Ingredients:</h3>
           <p class="marketing-site-content-section-block-subheader subheader" id="ingredients">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam omnis, maxime libero natus qui minus!</p>
-          <!-- <a href="#" class="round button small">learn more</a> -->
+         
         </div>
         <div class="marketing-site-content-section-block small-order-2 medium-order-1">
           <h3 class="marketing-site-content-section-block-header">Instructions</h3>
-          <p class="marketing-site-content-section-block-subheader subheader" id="instructions">Instructions lalalala lalal allalalla</p>
-          <!-- <a href="#" class="round button small">learn more</a> -->
+          <p class="marketing-site-content-section-block-subheader subheader" id="instructions"></p>
+          
         </div>
         <div class="marketing-site-content-section-img small-order-1 medium-order-2">
           <img src="https://images.pexels.com/photos/300857/pexels-photo-300857.jpeg?h=350&auto=compress&cs=tinysrgb" id="drink-img" alt="" />
