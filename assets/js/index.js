@@ -9,6 +9,7 @@ function getWeather() {
     var cityInput = $("#city-input");
     var city = cityInput.val()
     var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial"
+    $("#ingredients").empty();
     
     fetch(queryURL)
       .then(function (response) {
@@ -98,6 +99,9 @@ function getDrink(cocktail){
 
     var cocktailIngredients = $("#ingredients");
 
+    var cocktailDirections = $("#instructions")
+    cocktailDirections.html(data.drinks[0].strInstructions)
+
     for (var i = 1; i < 16; i++){
     if (data.drinks[0][`strIngredient${i}`] == null){
         break;
@@ -109,8 +113,7 @@ function getDrink(cocktail){
     cocktailIngredients.append(ingredients)
     
 
-    var cocktailDirections = $("#instructions")
-    cocktailDirections.html(data.drinks[0].strInstructions)
+   
     }
 
         })
