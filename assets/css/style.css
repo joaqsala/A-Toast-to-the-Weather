@@ -25,8 +25,36 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+
+  .h2 {
+    padding: 2.5rem;
+  }
+  
+.hero-section {
+  background: url("https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") 50% no-repeat;
+  background-size: cover;
+  height: 60vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero-section .hero-section-text {
+  color: #fefefe;
+  text-shadow: 1px 1px 2px #0a0a0a;
+}
+
+
   
 .marketing-site-content-section {
+  
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -35,17 +63,14 @@
           flex-wrap: wrap;
 }
 
-.marketing-site-content-section .button.round {
-  border-radius: 5000px;
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
+
 
 .marketing-site-content-section .marketing-site-content-section-img {
-  -webkit-align-self: center;
+  
+  -webkit-align-self: top;
       -ms-flex-item-align: center;
               -ms-grid-row-align: center;
-          align-self: center;
+          align-self: top;
   -webkit-flex: 1 0 100%;
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
@@ -63,13 +88,15 @@
   }
 }
 
+
+
 .marketing-site-content-section .marketing-site-content-section-block {
   padding: 1rem;
   -webkit-flex: 1 0 100%;
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
-  -webkit-align-self: stretch;
-      -ms-flex-item-align: stretch;
+  -webkit-align-self: top;
+      -ms-flex-item-align: center;
           align-self: stretch;
   background: #e6e6e6;
   display: -webkit-flex;
@@ -80,10 +107,10 @@
           flex-direction: column;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center;
+          justify-content:start;
   -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+      -ms-flex-align: top;
+          align-items: top;
 }
 
 @media screen and (min-width: 40em) {
@@ -100,10 +127,12 @@
 }
 
 .marketing-site-content-section-block-subheader {
-  font-size: 13px;
+  font-size: 18px;
 }
 
-
+#drink-area {
+  padding:2.5rem;
+}
 
 
   
