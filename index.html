@@ -25,43 +25,71 @@
     </div>
     
     
+
+
+
+</div>
+
     
 
 
-    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-        <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
-        <div class="title-bar-title">Menu</div>
-      </div>
+    <!-- <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+        
+        <div id = "weatherEl" class="title-bar-title">Menu</div>
+      </div> -->
       
       <div class="top-bar" id="responsive-menu">
         <div class="top-bar-right">
           <ul class="dropdown menu" data-dropdown-menu>
-            <li id="weather-output" class="menu-text">Your Current Weather</li>
-            <li class="has-submenu">
-              <a href="#0">Something here maybe if we need it?</a>
-              <ul class="submenu menu vertical" data-submenu>
-                <li><a href="#0">One</a></li>
-                <li><a href="#0">Two</a></li>
-                <li><a href="#0">Three</a></li>
-              </ul>
-            </li>
-            <li><a href="#0"></a></li>
-            <li><a href="#0"></a></li>
+            <li  class="menu-text">Find Your Current Weather:</li>
+            
+          
           </ul>
         </div>
         <div class="top-bar-left">
           <ul class="menu">
-            <li><input id="city-input" type="search" placeholder="Enter your City to find your Weather
-                "></li>
+            <li><input id="city-input" type="search" placeholder="Enter your City"></li>
             <li><button id="city-search" type="button" class="button">Search</button></li>
+            <li><!-- Trigger/Open The Modal -->
+              <button id="myBtn">Click here before you make your drink</button>
+              
+              <!-- The Modal -->
+              <div id="myModal" class="modal">
+              
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p>Always drink safely!</p>
+                </div>
+                          </li>
+            
+            
+         
           </ul>
+          
         </div>
 
        
       </div>
 
-      <div id = "weatherEl" class="marketing-site-content-section">
-        <div class="marketing-site-content-section-img" id="drink-area">
+
+
+<div class="top-bar topbar-center-logo" id="topbar-center-logo">
+  <div class="top-bar-left"> 
+  </div>
+  <div class="top-bar-center">
+    <div id="weatherEl"></div>
+  </div>
+  <div class="top-bar-right">
+    </div>
+</div>
+
+
+
+      <div  class="marketing-site-content-section">
+        <div  class="marketing-site-content-section-img" id="drink-area">
+          <a href="#" class="round button small">Get a Random Drink</a>
+
         </div>
         <div class="marketing-site-content-section-block">
           <h3 class="marketing-site-content-section-block-header">Ingredients:</h3>
@@ -77,6 +105,12 @@
           <img src="https://images.pexels.com/photos/300857/pexels-photo-300857.jpeg?h=350&auto=compress&cs=tinysrgb" id="drink-img" alt="" />
         </div>
       </div>
+
+
+   
+</div>
+
+
       
       
 
