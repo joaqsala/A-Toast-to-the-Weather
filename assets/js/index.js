@@ -1,6 +1,7 @@
 var apiKey = "f4d2316cd893af3bab99aa493b1486ad"
 var citySearch = $("#city-search");
 var weatherEl = document.getElementById("weatherEl")
+var cityInput = $("#city-input");
 
 
 function getWeather() {
@@ -117,3 +118,11 @@ function getDrink(cocktail){
 
 
     citySearch.on("click", getWeather)
+
+
+
+    cityInput.on("keydown", function(event) {
+        if (event.keyCode === 13) {
+          getWeather();
+        }
+      })
