@@ -33,7 +33,7 @@
 .hero-section {
   background: url("https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") 50% no-repeat;
   background-size: cover;
-  height: 60vh;
+  height: 20vh;
   text-align: center;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -62,6 +62,7 @@
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
 }
+
 
 
 
@@ -135,4 +136,89 @@
 }
 
 
+.topbar-center-logo {
+  background: #2c3840;
+}
+
+.topbar-center-logo .menu {
+  background: #2c3840;
+}
+
+.topbar-center-logo .menu a {
+  color: #fefefe;
+}
+
+.topbar-center-logo .top-bar-center {
+  font-size: 25px;
+  -webkit-flex: 1 10 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .topbar-center-logo .top-bar-center {
+    display: none;
+  }
+}
+
+#myBtn {
+  padding-left: 25%;
+}
+.top-bar, .top-bar ul {
+    background-color: #e6e6e6;
+    justify-content: auto;
+}
+.topbar-center-logo-mobile {
+  background: #2c3840;
+}
+
+.topbar-center-logo-mobile .menu-icon {
+  vertical-align: text-top;
+}
+
+.button.round {
+  border-radius: 5000px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  background-color: rgb(46, 51, 56);
+}
   
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

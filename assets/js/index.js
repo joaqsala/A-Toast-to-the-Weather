@@ -1,6 +1,7 @@
 var apiKey = "f4d2316cd893af3bab99aa493b1486ad"
 var citySearch = $("#city-search");
 var weatherEl = document.getElementById("weatherEl")
+var cityInput = $("#city-input");
 
 
 function getWeather() {
@@ -8,6 +9,7 @@ function getWeather() {
     var cityInput = $("#city-input");
     var city = cityInput.val()
     var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial"
+    $("#ingredients").empty();
     
     fetch(queryURL)
       .then(function (response) {
@@ -97,6 +99,9 @@ function getDrink(cocktail){
 
     var cocktailIngredients = $("#ingredients");
 
+    var cocktailDirections = $("#instructions")
+    cocktailDirections.html(data.drinks[0].strInstructions)
+
     for (var i = 1; i < 16; i++){
     if (data.drinks[0][`strIngredient${i}`] == null){
         break;
@@ -108,8 +113,7 @@ function getDrink(cocktail){
     cocktailIngredients.append(ingredients)
     
 
-    var cocktailDirections = $("#instructions")
-    cocktailDirections.html(data.drinks[0].strInstructions)
+   
     }
 
         })
@@ -117,3 +121,11 @@ function getDrink(cocktail){
 
 
     citySearch.on("click", getWeather)
+
+
+
+    cityInput.on("keydown", function(event) {
+        if (event.keyCode === 13) {
+          getWeather();
+        }
+      })
