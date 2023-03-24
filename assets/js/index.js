@@ -1,5 +1,6 @@
 var apiKey = "f4d2316cd893af3bab99aa493b1486ad"
 var citySearch = $("#city-search");
+var weatherEl = $("#weatherEl");
 
 
     
@@ -15,9 +16,34 @@ function getWeather() {
     fetch(queryURL)
       .then(function (response) {
         return response.json();
-      })
-      .then(function (data) {
-        console.log(data)
+    })
+    .then(function (data) {
+      console.log(data)
+      console.log(data.main.temp)
+      var cityTemp=data.main.temp
+      weatherEl.innerHTML = "<h2>" + cityTemp + "</h2>"
+
+
+        //insert conditions so that data.main.temp leads to a range of temps,
+        //that can then be used to query for a cocktail
+
+
+        // categories -
+        //  Spring(65< warm < 85): ["Negroni", "Manhattan", 'Abbey Cocktail', 'Angel Face', 'Aviation','Boomerang', 'Singapore Sling', 'Casino', 'Blue Lagoon', 'Lemon Elderflower Spritzer']
+        //  Summer(hot >= 85): ["Margarita", "Long Island Iced Tea", "Mojito", "Mai Tai",
+        //                    "Mint Julep", "Painkiller", "Tom Collins", "Pina Colada",
+        //                    "Moscow Mule", 'Strawberry Daiquiri', ]
+        //  Fall(45 < cool < 65): ["Sidecar", "Dry Martini","Applecar","Apple Cider Punch #1", "Cranberry Punch",
+        //                    "Masala Chai","Mulled Wine","Spiced Peach Punch", "Corpse Reviver", 'Adam & Eve', 'Addison', Martinez Cocktail']
+        //  Winter(cold <= 45): [ "Hot Toddy", "Irish Coffee", "Orange Scented Hot Chocolate", "Hot Creamy Bush", "Rum Toddy", "Melya",
+        //                "Salted Toffee Martini"]
+
+
+
+      });
+    }
+
+    citySearch.on("click", getWeather)
 
 
 
