@@ -34,8 +34,8 @@ function getWeather() {
 
         getDrink(cocktail);
 
-    }if (cityTemp < 85 && cityTemp > 65){
-        var springDrinks = ["Negroni", "Manhattan", 'Abbey Cocktail', 'Angel Face', 'Aviation','Boomerang', 'Singapore Sling', 'Casino', 'Blue Lagoon', 'Lemon Elderflower Spritzer']
+    }else if (cityTemp < 85 && cityTemp > 65){
+        var springDrinks = ["Negroni", "Manhattan", 'Abbey Cocktail', 'Angel Face', 'Aviation','Boomerang', 'Casino', 'Lemon Elderflower Spritzer']
 
         var cocktail = springDrinks[Math.floor(Math.random()*springDrinks.length)];
         console.log(cocktail)
@@ -43,9 +43,9 @@ function getWeather() {
         getDrink(cocktail);
 
         
-    }if (cityTemp < 65 && cityTemp > 45){
-        var fallDrinks = ["Sidecar", "Dry Martini", "Applecar","Apple Cider Punch #1", "Cranberry Punch",
-                        "Masala Chai","Mulled Wine","Spiced Peach Punch", "Corpse Reviver", 'Adam & Eve', 'Addison', "Martinez Cocktail"]
+    }else if (cityTemp < 65 && cityTemp > 45){
+        var fallDrinks = ["Sidecar", "Dry Martini", "Applecar", "Cranberry Punch",
+                        "Masala Chai","Mulled Wine","Spiced Peach Punch", "Corpse Reviver", 'Addison', "Martinez Cocktail"]
 
         var cocktail = fallDrinks[Math.floor(Math.random()*fallDrinks.length)];
         console.log(cocktail)
