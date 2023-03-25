@@ -117,7 +117,7 @@ function getDrink(cocktail){
     }
 
         })
-    }
+    // }
 
     // Store cocktailName in local storage
 
@@ -144,6 +144,7 @@ li.textContent = storedCocktailName;
 const ul = document.getElementById('drinks-list');
 
 ul.appendChild(li);
+}
 
  
 
