@@ -34,8 +34,8 @@ function getWeather() {
 
         getDrink(cocktail);
 
-    }if (cityTemp < 85 && cityTemp > 65){
-        var springDrinks = ["Negroni", "Manhattan", 'Abbey Cocktail', 'Angel Face', 'Aviation','Boomerang', 'Singapore Sling', 'Casino', 'Blue Lagoon', 'Lemon Elderflower Spritzer']
+    }else if (cityTemp < 85 && cityTemp > 65){
+        var springDrinks = ["Negroni", "Manhattan", 'Abbey Cocktail', 'Angel Face', 'Aviation','Boomerang', 'Casino', 'Lemon Elderflower Spritzer']
 
         var cocktail = springDrinks[Math.floor(Math.random()*springDrinks.length)];
         console.log(cocktail)
@@ -43,9 +43,9 @@ function getWeather() {
         getDrink(cocktail);
 
         
-    }if (cityTemp < 65 && cityTemp > 45){
-        var fallDrinks = ["Sidecar", "Dry Martini", "Applecar","Apple Cider Punch #1", "Cranberry Punch",
-                        "Masala Chai","Mulled Wine","Spiced Peach Punch", "Corpse Reviver", 'Adam & Eve', 'Addison', "Martinez Cocktail"]
+    }else if (cityTemp < 65 && cityTemp > 45){
+        var fallDrinks = ["Sidecar", "Dry Martini", "Applecar", "Cranberry Punch",
+                        "Masala Chai","Mulled Wine","Spiced Peach Punch", "Corpse Reviver", 'Addison', "Martinez Cocktail"]
 
         var cocktail = fallDrinks[Math.floor(Math.random()*fallDrinks.length)];
         console.log(cocktail)
@@ -117,8 +117,38 @@ function getDrink(cocktail){
     }
 
         })
-    }
+    // }
 
+    // Store cocktailName in local storage
+
+localStorage.setItem('cocktailName', cocktail);
+
+ 
+
+// Retrieve cocktailName from local storage
+
+const storedCocktailName = localStorage.getItem('cocktailName');
+
+ 
+
+// Create a new li element and set its text content to the stored cocktail name
+
+const li = document.createElement('li');
+
+li.textContent = storedCocktailName;
+
+ 
+
+// Append the li element to the ul element with id "drinks-list"
+
+const ul = document.getElementById('drinks-list');
+
+ul.appendChild(li);
+}
+
+ 
+
+    
 
     citySearch.on("click", getWeather)
 

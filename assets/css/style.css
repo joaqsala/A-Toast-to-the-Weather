@@ -81,6 +81,11 @@
   width: 100%;
 }
 
+#drink-img {
+ max-height: auto;
+ max-width: auto;
+}
+
 @media screen and (min-width: 40em) {
   .marketing-site-content-section .marketing-site-content-section-img {
     -webkit-flex: 1 0 50%;
