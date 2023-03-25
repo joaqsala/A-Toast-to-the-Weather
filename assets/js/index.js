@@ -119,6 +119,35 @@ function getDrink(cocktail){
         })
     }
 
+    // Store cocktailName in local storage
+
+localStorage.setItem('cocktailName', cocktail);
+
+ 
+
+// Retrieve cocktailName from local storage
+
+const storedCocktailName = localStorage.getItem('cocktailName');
+
+ 
+
+// Create a new li element and set its text content to the stored cocktail name
+
+const li = document.createElement('li');
+
+li.textContent = storedCocktailName;
+
+ 
+
+// Append the li element to the ul element with id "drinks-list"
+
+const ul = document.getElementById('drinks-list');
+
+ul.appendChild(li);
+
+ 
+
+    
 
     citySearch.on("click", getWeather)
 
