@@ -1,7 +1,8 @@
 /* Today's Mixes-Cocktail Recipe Results */
 .promotion-hero {
-    background-image: url("https://placehold.it/150x500");
-    background-size: cover;
+    /* background-image: url("https://placehold.it/150x500");
+    background-size: cover; */
+    background-color: #e6e6e6;
     height: auto;
     padding: 3rem;
   }
@@ -54,7 +55,7 @@
 
   
 .marketing-site-content-section {
-  
+  background-color: #e6e6e6;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
