@@ -2,7 +2,7 @@
 .promotion-hero {
     background-image: url("https://placehold.it/150x500");
     background-size: cover;
-    height: 400px;
+    height: auto;
     padding: 3rem;
   }
   
@@ -33,7 +33,7 @@
 .hero-section {
   background: url("https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") 50% no-repeat;
   background-size: cover;
-  height: 20vh;
+  height: 50vh;
   text-align: center;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -84,6 +84,10 @@
 #drink-img {
  max-height: auto;
  max-width: auto;
+}
+
+#hide {
+  display: none;
 }
 
 @media screen and (min-width: 40em) {
