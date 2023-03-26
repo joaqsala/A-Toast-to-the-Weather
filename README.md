@@ -27,3 +27,21 @@ Acceptance criteria
 * It's done when user enters zip code or city and clicks on search, and a random drink is displayed 
 * It's done when user enters zip code or city and clicks on search, and temperature of the location entered is displayed 
 * It's done when drink recipe recommended is displayed in Today's Mixes section
+
+MVP Features 
+1. SEARCH by City or Zip: An input section for the user to enter their city or zip code
+The input section is a function that acts like a bartender would. It will take the location information such as zip or name of city. 
+
+2. Weather details: This section displays the current weather of the city or zip entered to let the user know outside temperature. 
+3. Ingredients and Instructions: This is a responsive section that gives the user information for drinks recommended based on the weather condition. The user has the option to continue with other recommendations if they don’t like the one suggested until they go through the entire list of drinks for that weather range. 
+
+4. Today’s Mixes section: This is a capture of all the cocktails or beverages recommended in a single session. Once the user reloads the page, the section clears out. 
+
+For Future Development
+
+a)	Ratings of drink recipe recommended 
+b)	Making the drink list clickable 
+c)	Adding more drinks 
+d)	User to pick base spirit and search
+
+
