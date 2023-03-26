@@ -19,7 +19,7 @@ function getWeather() {
     .then(function (data) {
       console.log(data)
       console.log(data.main.temp)
-      var cityTemp=data.main.temp
+      var cityTemp=Math.round(data.main.temp)
       var cityName = data.name
       weatherEl.innerHTML = "<h2>The temperature in " + cityName + " is " + cityTemp + "\u00B0F.</h2>"
      
