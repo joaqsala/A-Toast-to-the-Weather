@@ -19,7 +19,7 @@ function getWeather() {
     .then(function (data) {
       console.log(data)
       console.log(data.main.temp)
-      var cityTemp=data.main.temp
+      var cityTemp=Math.round(data.main.temp)
       var cityName = data.name
       weatherEl.innerHTML = "<h2>The temperature in " + cityName + " is " + cityTemp + "\u00B0F.</h2>"
      
@@ -79,6 +79,9 @@ function getDrink(cocktail){
     console.log(data.drinks[0].strDrink)
     console.log(data.drinks[0].strDrinkThumb)
     console.log(data.drinks[0].strInstructions)
+
+    document.getElementsByClassName("marketing-site-content-section")[0].style.backgroundColor ="initial"; 
+    document.getElementById("comment").innerHTML="🌞🌞🍹<em><strong>Search again to find a different cocktail. Cheers! </strong></em>🍹🌞🌞";
 
     // in some div w/id of #drink-area
     var cocktailName = $("#drink-area");
