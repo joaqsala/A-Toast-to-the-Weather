@@ -9,7 +9,7 @@ function getWeather() {
     //added id of city-input to input field in html
     var cityInput = $("#city-input");
     var city = cityInput.val()
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial"
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial"
     $("#ingredients").empty();
     
     fetch(queryURL)
